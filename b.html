@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced CSS Animation</title>
+    <style>
+        /* Full-screen container with background animation */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(45deg, #3498db, #e74c3c, #2ecc71);
+            background-size: 600% 600%;
+            animation: gradientBackground 15s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Particle effect using pseudo-elements */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.2);
+            animation: particlesMove 10s linear infinite;
+            transform: translate(-50%, -50%);
+        }
+
+        /* The animated square */
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            animation: moveAndColorChange 5s infinite alternate;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Keyframes for the square animation */
+        @keyframes moveAndColorChange {
+            0% {
+                transform: translateX(0);
+                background-color: #3498db;
+                /* Blue */
+            }
+
+            50% {
+                transform: translateX(200px);
+                background-color: #e74c3c;
+                /* Red */
+            }
+
+            100% {
+                transform: translateX(0);
+                background-color: #2ecc71;
+                /* Green */
+            }
+        }
+
+        /* Gradient background animation */
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Particle movement */
+        @keyframes particlesMove {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="square"></div>
+</body>
+
+</html>
