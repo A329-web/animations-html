@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stylish Page</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+            line-height: 1.6;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #2b2b2b;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #f0f0f0;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            animation: fadeIn 2s ease-in;
+            flex: 1;
+        }
+
+        section,
+        aside {
+            flex: 1 1 45%;
+            background-color: #2b2b2b;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        section p,
+        aside p {
+            text-align: justify;
+        }
+
+        figure {
+            margin-top: 20px;
+            text-align: center;
+            animation: zoomIn 1s ease-in-out;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        figure img:hover {
+            transform: scale(1.03);
+        }
+
+        .video-container {
+            margin: 30px auto;
+            max-width: 800px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        footer {
+            background-color: #2b2b2b;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+            animation: fadeInUp 1.2s ease-in-out;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 0.95rem;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>NAV BAR</h1>
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">GALLERY</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <p>
+                Flowers, also known as blooms and blossoms, are the reproductive structures of flowering plants
+                (angiosperms).
+                Typically, they are structured in four sets, called whorls, around the end of a stalk. These whorls
+                include: calyx,
+                modified leaves; corolla, the petals; androecium, the male reproductive unit consisting of stamens and
+                pollen; and
+                gynoecium, the female part, containing style and stigma, which receives the pollen, and ovary, which
+                contains the
+                ovules.
+            </p>
+        </section>
+
+        <aside>
+            <article>
+                <p>
+                    Flowers grow out of an apical meristem (stem tip) and this growth is controlled by the presence of
+                    MADS-box genes.
+                    Simple models are used to describe this development. Flowers are heterosporous, and so produce both
+                    microspores and
+                    megaspores, which generally create male and female gametophytes. Pollination mediates the transport
+                    of pollen to the
+                    ovules in the ovaries, to facilitate sexual reproduction.
+                </p>
+            </article>
+        </aside>
+    </main>
+
+    <figure>
+        <img src="images (1).jpg" alt="Beautiful flower" />
+    </figure>
+
+    <div class="video-container">
+        <video controls autoplay muted loop>
+            <source src="https://cdn.pixabay.com/video/2018/05/26/16453-272487468_large.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Arjeeta's World. All rights reserved.</p>
+        <p>Follow us on
+            <a href="#" style="color: #ffcc00; text-decoration: none;">Instagram</a>,
+            <a href="#" style="color: #ffcc00; text-decoration: none;">Twitter</a>, and
+            <a href="#" style="color: #ffcc00; text-decoration: none;">Facebook</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
