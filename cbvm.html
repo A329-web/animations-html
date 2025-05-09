@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 2px solid green;
+            position: static;
+
+        }
+
+        div.fixed{
+            border: 4px solid red;
+            position: fixed;
+        }
+
+        div.relative{
+            border: 3px solid yellow;
+            position: relative;
+        }
+
+        div.absolute{
+            border:  5px solid purple;
+            position: absolute;
+        }
+
+        div.sticky{
+            border: 4px solid orange;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        DIV WITH NO POSITIONING 
+        IT IS STATIC AS ITS DEFAULT
+    </div>
+
+    <div class="fixed">
+        FIXED POSITION
+    </div>
+
+    <div class="relative">
+        RELATIVE POSTIONING
+        <div class="sticky">
+            STICKY POSITIONING
+        </div>
+    </div>
+
+    <div class="absolute">
+        ABSOLUTE POSItioning
+    </div>
+</body>
+</html>

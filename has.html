@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Styling and Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, lightpink, lightgreen);
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: beige;
+            color: black;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+            animation: fadeInUp 1.5s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 {
+            text-shadow: 2px 2px 5px lightgreen;
+            text-transform: uppercase;
+            text-align: center;
+            color: black;
+            font-size: 2.8em;
+            margin-bottom: 25px;
+            animation: slideDown 1.2s ease-in-out;
+        }
+
+        p {
+            text-indent: 40px;
+            text-decoration: underline;
+            /* plain underline */
+            line-height: 1.8;
+            font-size: 1.2em;
+            color: black;
+            animation: fadeText 2s ease forwards;
+        }
+
+        .highlight {
+            color: lightpink;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background-color: black;
+            color: lightgreen;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: lightpink;
+            color: black;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeText {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Clean CSS Styling</h1>
+        <p>
+            This paragraph shows how to use text-shadow, box-shadow, text-indent,
+            text-decoration, and text-transform using a light and elegant color palette with soft animation.
+        </p><story class="html"></story>
+        <a href="#" class="btn">Click Me</a>
+    </div>
+
+</body>
+
+</html>

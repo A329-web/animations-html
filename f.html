@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Black Theme Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #f5f5f5;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff9800;
+            font-size: 3em;
+            margin: 40px 0 10px;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        h1:hover {
+            transform: scale(1.05);
+            color: #ffc107;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 12px 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border: 3px solid #e91e63;
+            background-color: #111;
+            color: #fff;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]::placeholder,
+        input[type="password"]::placeholder {
+            color: #888;
+        }
+
+        input[type="text"]:hover,
+        input[type="password"]:hover {
+            background-color: #1a1a1a;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #00bcd4;
+            box-shadow: 0 0 10px rgba(0, 188, 212, 0.7);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul>li {
+            color: #4caf50;
+            font-size: 20px;
+            margin: 8px 0;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        ul>li:hover {
+            color: #81c784;
+            transform: scale(1.1);
+        }
+
+        ol li {
+            color: #aaa;
+            font-style: italic;
+            margin: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        ol li:hover {
+            color: #fff;
+        }
+
+        h1+p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 2.5em;
+            color: #00bcd4;
+            margin-top: 0;
+            text-shadow: 1px 1px #000;
+            transition: color 0.3s ease;
+        }
+
+        h1+p:hover {
+            color: #00ffff;
+        }
+
+        p {
+            font-size: 1.2em;
+            padding: 10px;
+            margin: 10px auto;
+            max-width: 600px;
+            transition: transform 0.3s ease, color 0.3s ease;
+            cursor: default;
+        }
+
+        p:hover {
+            transform: translateY(-3px);
+            color: #ccc;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, #e91e63, #00bcd4);
+            margin: 40px auto;
+            width: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ATTRIBUTE SELECTOR</h1>
+    <input type="text" placeholder="enter your name"><br>
+    <input type="password" placeholder="enter your password"><br>
+
+    <hr>
+
+    <h1>CHILD SELECTOR</h1>
+    <ul>
+        <li>Child1</li>
+        <ol>
+            <li>subchild1</li>
+            <li>subchild2</li>
+        </ol>
+        <li>Child2</li>
+        <li>Child3</li>
+    </ul>
+
+    <hr>
+
+    <h1>SIBLING SELECTOR</h1>
+    <p>This is sib selector</p>
+
+    <hr>
+
+    <p>This is another paragraph</p>
+</body>
+
+</html>

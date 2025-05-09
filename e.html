@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Grid</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            padding-top: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .grid-item {
+            flex: 1 1 150px;
+            margin: 10px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Equal Grids</h1>
+    <div class="container grid-container">
+        <div class="grid-item">Column 1</div>
+        <div class="grid-item">Column 2</div>
+        <div class="grid-item">Column 3</div>
+        <div class="grid-item">Column 4</div>
+        <div class="grid-item">Column 5</div>
+    </div>
+</body>
+
+</html>

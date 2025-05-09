@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lion and the Mouse</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #ffe0b2, #fff3e0);
+            margin: 0;
+            padding: 0;
+            color: #4e342e;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #ffffffcc;
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            animation: fadeInContainer 1.2s ease;
+        }
+
+        h1 {
+            text-align: center;
+            color: #d84315;
+            font-size: 36px;
+            text-shadow: 2px 2px #ffccbc;
+            animation: fadeInDown 1.2s ease-in-out;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: #ffab91;
+            width: 60%;
+            margin: 20px auto;
+            animation: fadeInUp 1.3s ease-in-out;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin: 20px 0;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        img {
+            display: block;
+            margin: 30px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s ease;
+            animation: zoomIn 1.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.03);
+        }
+
+        .moral {
+            text-align: center;
+            font-weight: bold;
+            font-size: 22px;
+            color: #1b5e20;
+            margin-top: 40px;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .audio-controls {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .audio-controls button {
+            background-color: #ff7043;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .audio-controls button:hover {
+            background-color: #e64a19;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInContainer {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            p,
+            .moral {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>The Lion and the Mouse</h1>
+        <hr>
+        <p>One sunny day, a big lion was sleeping in the jungle. A tiny mouse started running up and down on him just
+            for fun. This woke the lion up. He caught the mouse with his big paw and was about to eat him.</p>
+
+        <p>The scared mouse said, "Please let me go, Mr. Lion! Maybe one day, I can help you too." The lion laughed
+            because he didn’t think the little mouse could ever help him. But he was in a good mood, so he let the mouse
+            go.</p>
+
+        <p>Later on, the lion got trapped in a net set by hunters. He roared loudly because he couldn't get out. The
+            little mouse heard him and ran to help. She bit through the net with her tiny, sharp teeth, and the lion was
+            free.</p>
+
+        <img src="download (4).jpg" alt="Lion and Mouse Story">
+
+        <p class="moral">Moral: Kindness is never wasted. Even the smallest friend can be the greatest help.</p>
+
+        <div class="audio-controls">
+            <button onclick="toggleNarration()" id="narrationBtn">Play Narration</button>
+            <audio id="narration" src="story.mp3"></audio>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('narration');
+        const btn = document.getElementById('narrationBtn');
+
+        function toggleNarration() {
+            if (audio.paused) {
+                audio.play();
+                btn.textContent = "Pause Narration";
+            } else {
+                audio.pause();
+                btn.textContent = "Play Narration";
+            }
+        }
+
+        // Reset button when narration ends
+        audio.onended = () => {
+            btn.textContent = "Play Narration";
+        };
+    </script>
+</body>
+
+</html>
