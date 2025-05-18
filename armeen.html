@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+        body {
+            font-family: 'Gowun Dodum', sans-serif;
+            background: linear-gradient(135deg, #ffe6f7, #e0c3fc);
+            color: #333;
+            margin: 40px;
+            line-height: 1.7;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #ff4d6d;
+            text-align: center;
+            text-shadow: 2px 2px 5px #ffd6e0;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.03);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        ul {
+            padding: 0;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        ul li {
+            background: #ffffff;
+            color: #444;
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-left: 6px solid #ff8fab;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        ul li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            background: #fff0f5;
+        }
+
+        p:nth-of-type(1) {
+            font-style: italic;
+            color: #c77dff;
+            text-align: center;
+        }
+
+        p:nth-of-type(2)::first-line {
+            font-weight: bold;
+            color: #7b2cbf;
+        }
+
+        a {
+            display: inline-block;
+            margin: 15px 10px 0 0;
+            padding: 12px 24px;
+            background: linear-gradient(to right, #ff6f91, #ff9671);
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(255, 111, 145, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(255, 111, 145, 0.6);
+        }
+
+        a:active {
+            background-color: #f06595;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .image-container {
+            position: relative;
+            width: 180px;
+            border: 5px double #ff9edb;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 12px rgba(255, 127, 212, 0.5), 0 0 20px rgba(255, 127, 212, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: white;
+        }
+
+        .image-container:hover {
+            transform: scale(1.07);
+            box-shadow: 0 0 20px rgba(255, 111, 199, 0.7);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .audio-wrapper {
+    text-align: center;
+    background: linear-gradient(to right, #ffdee9, #b5fffc);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(255, 192, 203, 0.3);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.audio-wrapper p {
+    margin: 0 0 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ff4d6d;
+}
+
+
+        .name-tag {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to right, #ff9edb, #ffc3a0);
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            padding: 8px 0;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 4px #d45ba1;
+            animation: slideUp 0.5s ease-in-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .fan-board {
+            margin-top: 40px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .fan-board input,
+        .fan-board textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ff8fab;
+            border-radius: 10px;
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+
+        .fan-board button {
+            background-color: #ff8fab;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .fan-board button:hover {
+            background-color: #f06595;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="audio-wrapper">
+        <p>🎶 Now Playing:</p>
+        <audio controls autoplay loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+
+    <h1>🌟 Welcome to the Stray Kids Universe 🌟</h1>
+
+    <ul>
+        <li>🐺 Bang Chan - Leader and Producer</li>
+        <li>🐱 Lee Know - Dance & Performance</li>
+        <li>🐻 Changbin - Rap & Lyrics</li>
+        <li>🦋 Hyunjin - Visual & Dance</li>
+        <li>🐿️ Han - Rapper & Vocal</li>
+        <li>🐣 Felix - Dance & Charisma</li>
+        <li>🐶 Seungmin - Vocal Sweetness</li>
+        <li>🐥 I.N - The Maknae Star</li>
+    </ul>
+
+    <p>🎤 Stray Kids isn't just a K-pop group — it's a global phenomenon led by creativity and passion!</p>
+    <p>From powerful performances to heartfelt lyrics, Stray Kids inspires millions around the world. 💖</p>
+
+    <a href="#">✨ Join STAY Community</a>
+    <a href="#">🎬 Watch Latest MV</a>
+    <a href="#">🛍️ Official Merchandise</a>
+
+    <div class="image-gallery">
+        <div class="image-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx967G-rnzaUt44TCt8_BrHoesebJfLulJrA&s"
+                alt="Stray Kids Group">
+            <div class="name-tag">Stray Kids</div>
+        </div>
+        <div class="image-container">
+            <img src="https://i.pinimg.com/originals/33/bf/16/33bf167cd108eee3a332d59a3b6387f8.jpg" alt="Stray Kids">
+            <div class="name-tag">Stray Kids</div>
+        </div>
+        <div class="image-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzuqFIaf4pGy56uqWOvJR4oUVVFgy7pCqYcQ&s"
+                alt="Stray Kids">
+            <div class="name-tag">Stray Kids</div>
+        </div>
+        <!-- Add more image-containers as needed -->
+    </div>
+
+    <div class="fan-board">
+        <h2>💬 Leave a Message for Stray Kids!</h2>
+        <input type="text" placeholder="Your name">
+        <textarea rows="4" placeholder="Your message..."></textarea><br>
+        <button>Send Message</button>
+    </div>
+</body>
+
+</html>
